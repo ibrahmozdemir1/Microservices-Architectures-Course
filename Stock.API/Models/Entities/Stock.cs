@@ -9,9 +9,9 @@ namespace Stock.API.Models.Entities
         [BsonElement(Order = 0)]
         public Guid Id { get; set; }
 
-        [BsonGuidRepresentation(MongoDB.Bson.GuidRepresentation.CSharpLegacy)]
+        [BsonRepresentation(MongoDB.Bson.BsonType.String)]
         [BsonElement(Order = 1)]
-        public Guid ProductId { get; set; }
+        public string ProductId { get; set; }
 
         [BsonRepresentation(MongoDB.Bson.BsonType.Int64)]
         [BsonElement(Order = 2)]

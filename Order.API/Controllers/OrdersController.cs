@@ -56,6 +56,7 @@ namespace Order.API.Controllers
                     Count = s.Count,
                     ProductId = s.ProductId,
                 }).ToList(),
+                TotalPrice = order.TotalPrice,
             };
 
             await _publishEndpoint.Publish(orderCreatedEvent);

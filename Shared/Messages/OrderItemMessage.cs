@@ -9,7 +9,7 @@ namespace Shared.Messages
     public class OrderItemMessage
     {
         public int Count { get; set; }
-        public Guid ProductId { get; set; }
+        public string ProductId { get; set; }
 
     }
 }

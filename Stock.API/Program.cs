@@ -20,7 +20,7 @@ builder.Services.AddMassTransit(configurator =>
     configurator.UsingRabbitMq((context, _configurator) =>
     {
         _configurator.Host(builder.Configuration.GetConnectionString("RabbitMQServer"));
-        _configurator.ReceiveEndpoint(RabbitMQSettings.Stock_OrderCreatedEventQueu, e => e.ConfigureConsumer<OrderCreatedEventConsumer>(context));
+        _configurator.ReceiveEndpoint(RabbitMQSettings.Stock_OrderCreatedEventQueue, e => e.ConfigureConsumer<OrderCreatedEventConsumer>(context));
     });
 });
 
@@ -34,11 +34,11 @@ MongoDBService mongoDBService = scope.ServiceProvider.GetService<MongoDBService>
 var collection = mongoDBService.GetCollection<Stock.API.Models.Entities.Stock>();
 if (!collection.Find(s => true).Any())
 {
-    await collection.InsertOneAsync(new() { ProductId = new Guid(), Count = 1000 });
-    await collection.InsertOneAsync(new() { ProductId = new Guid(), Count = 2000 });
-    await collection.InsertOneAsync(new() { ProductId = new Guid(), Count = 3000 });
-    await collection.InsertOneAsync(new() { ProductId = new Guid(), Count = 4000 });
-    await collection.InsertOneAsync(new() { ProductId = new Guid(), Count = 500 });
+    await collection.InsertOneAsync(new() { ProductId = "a", Count = 1000 });
+    await collection.InsertOneAsync(new() { ProductId = "b", Count = 2000 });
+    await collection.InsertOneAsync(new() { ProductId = "c", Count = 3000 });
+    await collection.InsertOneAsync(new() { ProductId = "d", Count = 4000 });
+    await collection.InsertOneAsync(new() { ProductId = "e", Count = 500 });
 }
 #endregion
 
