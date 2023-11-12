@@ -15,3 +15,11 @@ Uses Technologies -> C#, .Net, PostgreSQL, MongoDB, RabbitMQ
 
 6 - Critics of the microservice practice
 
+7 - Watching of Microservices and Take it Logging
+
+8 - Security of Microservices
+
+9 - Data synchronization between services
+
+10 - CAP Theorem
+
