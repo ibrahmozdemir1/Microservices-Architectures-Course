@@ -23,3 +23,9 @@ Uses Technologies -> C#, .Net, PostgreSQL, MongoDB, RabbitMQ
 
 10 - CAP Theorem
 
+11 - Eventual & Strong Consistency 
+
+12 - Strong Consistency Two-Phase Commit (2PC) Protocol Theory
+
+13 - Basic Strong Consistency Two-Phase Commit (2PC) Protocol Example
+
