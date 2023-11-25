@@ -15,13 +15,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicMicroserviceArchitectu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2PCProtocolStrongConsistency", "2PCProtocolStrongConsistency", "{D893EC4E-CBCA-4DEC-83C7-62EFD0C4D86E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "2PCProtocolStrongConsistency\Order.API\Order.API.csproj", "{B2A22BA1-FC89-49F8-A22D-0E08F765AFE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.API", "2PCProtocolStrongConsistency\Order.API\Order.API.csproj", "{B2A22BA1-FC89-49F8-A22D-0E08F765AFE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coordinator", "2PCProtocolStrongConsistency\Coordinator\Coordinator.csproj", "{8B075DBA-8CC8-4411-BA5E-D29805E6E5AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coordinator", "2PCProtocolStrongConsistency\Coordinator\Coordinator.csproj", "{8B075DBA-8CC8-4411-BA5E-D29805E6E5AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "2PCProtocolStrongConsistency\Stock.API\Stock.API.csproj", "{16A3C8C0-1435-4FF1-8521-BFFF80C9240F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.API", "2PCProtocolStrongConsistency\Stock.API\Stock.API.csproj", "{16A3C8C0-1435-4FF1-8521-BFFF80C9240F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "2PCProtocolStrongConsistency\Payment.API\Payment.API.csproj", "{56517FCF-0AFA-417C-86FB-B801E8040EF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.API", "2PCProtocolStrongConsistency\Payment.API\Payment.API.csproj", "{56517FCF-0AFA-417C-86FB-B801E8040EF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SagaPatternChoreographyPractice", "SagaPatternChoreographyPractice", "{71EE4458-7ABB-4197-B247-72B5905908C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "SagaPatternChoreographyPractice\Shared\Shared.csproj", "{DCA35604-8489-4497-9987-EE2D3FBAE475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "SagaPatternChoreographyPractice\Order.API\Order.API.csproj", "{6D63E7C4-F91A-49DF-997A-EAED57B7B5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "SagaPatternChoreographyPractice\Payment.API\Payment.API.csproj", "{985890DF-9CBC-4C4A-B7E8-7BA914187AD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "SagaPatternChoreographyPractice\Stock.API\Stock.API.csproj", "{190258D2-AC11-467C-BA25-E4080C6F37AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +71,22 @@ Global
 		{56517FCF-0AFA-417C-86FB-B801E8040EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56517FCF-0AFA-417C-86FB-B801E8040EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56517FCF-0AFA-417C-86FB-B801E8040EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA35604-8489-4497-9987-EE2D3FBAE475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA35604-8489-4497-9987-EE2D3FBAE475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA35604-8489-4497-9987-EE2D3FBAE475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA35604-8489-4497-9987-EE2D3FBAE475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D63E7C4-F91A-49DF-997A-EAED57B7B5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D63E7C4-F91A-49DF-997A-EAED57B7B5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D63E7C4-F91A-49DF-997A-EAED57B7B5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D63E7C4-F91A-49DF-997A-EAED57B7B5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985890DF-9CBC-4C4A-B7E8-7BA914187AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985890DF-9CBC-4C4A-B7E8-7BA914187AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985890DF-9CBC-4C4A-B7E8-7BA914187AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985890DF-9CBC-4C4A-B7E8-7BA914187AD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190258D2-AC11-467C-BA25-E4080C6F37AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190258D2-AC11-467C-BA25-E4080C6F37AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190258D2-AC11-467C-BA25-E4080C6F37AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190258D2-AC11-467C-BA25-E4080C6F37AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +100,10 @@ Global
 		{8B075DBA-8CC8-4411-BA5E-D29805E6E5AD} = {D893EC4E-CBCA-4DEC-83C7-62EFD0C4D86E}
 		{16A3C8C0-1435-4FF1-8521-BFFF80C9240F} = {D893EC4E-CBCA-4DEC-83C7-62EFD0C4D86E}
 		{56517FCF-0AFA-417C-86FB-B801E8040EF3} = {D893EC4E-CBCA-4DEC-83C7-62EFD0C4D86E}
+		{DCA35604-8489-4497-9987-EE2D3FBAE475} = {71EE4458-7ABB-4197-B247-72B5905908C6}
+		{6D63E7C4-F91A-49DF-997A-EAED57B7B5DC} = {71EE4458-7ABB-4197-B247-72B5905908C6}
+		{985890DF-9CBC-4C4A-B7E8-7BA914187AD1} = {71EE4458-7ABB-4197-B247-72B5905908C6}
+		{190258D2-AC11-467C-BA25-E4080C6F37AB} = {71EE4458-7ABB-4197-B247-72B5905908C6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AD2700E-A696-44C0-8472-8B681FE4C5C9}
