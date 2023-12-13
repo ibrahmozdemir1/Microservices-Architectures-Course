@@ -2,34 +2,40 @@
 using MongoDB.Driver;
 using Shared;
 using Shared.Events;
+using Shared.Events.OrderEvents;
+using Shared.Events.StockEvents;
 using Shared.Messages;
+using Shared.Settings;
 using Stock.API.Services;
 
 namespace Stock.API.Consumers
 {
-    public class OrderCreatedEventConsumer : IConsumer<OrderStartedEvent>
+    public class OrderCreatedEventConsumer : IConsumer<OrderCreatedEvent>
     {
         IMongoCollection<Stock.API.Models.Entities.Stock> _stockCollection;
         readonly ISendEndpointProvider _sendEndpointProvider;
-        readonly IPublishEndpoint _publishEndpoint;
 
-        public OrderCreatedEventConsumer(MongoDBService mongoDBService, ISendEndpointProvider sendEndpointProvider, IPublishEndpoint publishEndpoint)
+        public OrderCreatedEventConsumer(MongoDBService mongoDBService, ISendEndpointProvider sendEndpointProvider)
         {
             _stockCollection = mongoDBService.GetCollection<Stock.API.Models.Entities.Stock>();
             _sendEndpointProvider = sendEndpointProvider;
-            _publishEndpoint = publishEndpoint;
         }
 
-        public async Task Consume(ConsumeContext<OrderStartedEvent> context)
+        public async Task Consume(ConsumeContext<OrderCreatedEvent> context)
         {
             List<bool> stockResult = new();
 
             foreach(OrderItemMessage orderItem in context.Message.OrderItems)
             {
                 stockResult.Add(
-                    (await _stockCollection.FindAsync(s => s.ProductId == orderItem.ProductId && s.Count >= orderItem.Count))
-                    .Any());
+                    await (await _stockCollection.FindAsync(s => s.ProductId == orderItem.ProductId && 
+                    s.Count >= (long)orderItem.Count))
+                    .AnyAsync());
             }
+
+            var sendEndpoint = await 
+                _sendEndpointProvider.GetSendEndpoint(new Uri($"queue:{RabbitMQSettings.StateMachineQueue}"));
+
 
             if(stockResult.TrueForAll(sr => sr.Equals(true)))
             {
@@ -44,34 +50,26 @@ namespace Stock.API.Consumers
                 }
 
 
-                StockReservedEvent stockReservedEvent = new()
+                StockReservedEvent stockReservedEvent = new(context.Message.CorrelationId)
                 {
-                    BuyerId = context.Message.BuyerId,
-                    OrderId = context.Message.OrderId,
-                    TotalPrice = context.Message.TotalPrice,
+                    OrderItems = context.Message.OrderItems,
                 };
 
-                ISendEndpoint sendEndPoint = await _sendEndpointProvider.GetSendEndpoint(new 
-                    Uri($"queue:{RabbitMQSettings.Payment_StockReservedEventQueue}"));
-
-                await sendEndPoint.Send(stockReservedEvent);
+                await sendEndpoint.Send(stockReservedEvent);
 
                 // Payment....
             }
             else
             {
-                StockNotReservedEvent stockNotReservedEvent = new()
+                StockNotReservedEvent stockNotReservedEvent = new(context.Message.CorrelationId)
                 {
-                    BuyerId = context.Message.BuyerId,
-                    OrderId = context.Message.OrderId,
-                    Message = "",
+                    Message = "Stok Yetersiz....",
                 };
 
 
-                await _publishEndpoint.Publish(stockNotReservedEvent);
+                await  sendEndpoint.Send(stockNotReservedEvent);
                 // Siparişin tutarsız veya geçersiz olduğuna dair işlemler.
             }
-            throw new NotImplementedException();
         }
     }
 }

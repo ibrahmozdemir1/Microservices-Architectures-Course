@@ -8,9 +8,10 @@ namespace Shared.Messages
 {
     public class OrderItemMessage
     {
-        public decimal Price { get; set; }
         public int Count { get; set; }
-        public string ProductId { get; set; }
+        public int ProductId { get; set; }
+        public decimal Price { get; set; }
+
 
     }
 }

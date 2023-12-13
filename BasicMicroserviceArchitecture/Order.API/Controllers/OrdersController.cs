@@ -47,7 +47,7 @@ namespace Order.API.Controllers
 
             await _context.SaveChangesAsync();
 
-            OrderCreatedEvent orderCreatedEvent = new()
+            OrderStartedEvent orderCreatedEvent = new()
             {
                 BuyerId = order.BuyerId,
                 OrderId = order.OrderId,

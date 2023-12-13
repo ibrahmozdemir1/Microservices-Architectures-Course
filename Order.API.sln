@@ -25,13 +25,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.API", "2PCProtocolS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SagaPatternChoreographyPractice", "SagaPatternChoreographyPractice", "{71EE4458-7ABB-4197-B247-72B5905908C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "SagaPatternChoreographyPractice\Shared\Shared.csproj", "{DCA35604-8489-4497-9987-EE2D3FBAE475}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "SagaPatternChoreographyPractice\Shared\Shared.csproj", "{DCA35604-8489-4497-9987-EE2D3FBAE475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "SagaPatternChoreographyPractice\Order.API\Order.API.csproj", "{6D63E7C4-F91A-49DF-997A-EAED57B7B5DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.API", "SagaPatternChoreographyPractice\Order.API\Order.API.csproj", "{6D63E7C4-F91A-49DF-997A-EAED57B7B5DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "SagaPatternChoreographyPractice\Payment.API\Payment.API.csproj", "{985890DF-9CBC-4C4A-B7E8-7BA914187AD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.API", "SagaPatternChoreographyPractice\Payment.API\Payment.API.csproj", "{985890DF-9CBC-4C4A-B7E8-7BA914187AD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "SagaPatternChoreographyPractice\Stock.API\Stock.API.csproj", "{190258D2-AC11-467C-BA25-E4080C6F37AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.API", "SagaPatternChoreographyPractice\Stock.API\Stock.API.csproj", "{190258D2-AC11-467C-BA25-E4080C6F37AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SagaPatternOrchestrationPractice", "SagaPatternOrchestrationPractice", "{953EF913-0FC6-4A9A-AE47-1A96D3D8C984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "SagaPatternOrchestrationPractice\Order.API\Order.API.csproj", "{50194A65-BA55-49D0-A624-5B6742F284EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "SagaPatternOrchestrationPractice\Payment.API\Payment.API.csproj", "{9828252F-0187-4E84-B918-0105415C77D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "SagaPatternOrchestrationPractice\Stock.API\Stock.API.csproj", "{BE4ED4E6-D9CC-4CDF-AA96-45E7B69EACAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "SagaPatternOrchestrationPractice\Shared\Shared.csproj", "{1DA626EB-0F17-47B9-AC45-9B5C55527912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaStateMachine.Service", "SagaPatternOrchestrationPractice\SagaStateMachine.Service\SagaStateMachine.Service.csproj", "{0B0FE417-2BE1-4BBD-9EB9-DE4A67E46DAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +99,26 @@ Global
 		{190258D2-AC11-467C-BA25-E4080C6F37AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{190258D2-AC11-467C-BA25-E4080C6F37AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{190258D2-AC11-467C-BA25-E4080C6F37AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50194A65-BA55-49D0-A624-5B6742F284EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50194A65-BA55-49D0-A624-5B6742F284EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50194A65-BA55-49D0-A624-5B6742F284EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50194A65-BA55-49D0-A624-5B6742F284EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9828252F-0187-4E84-B918-0105415C77D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9828252F-0187-4E84-B918-0105415C77D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9828252F-0187-4E84-B918-0105415C77D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9828252F-0187-4E84-B918-0105415C77D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE4ED4E6-D9CC-4CDF-AA96-45E7B69EACAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4ED4E6-D9CC-4CDF-AA96-45E7B69EACAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4ED4E6-D9CC-4CDF-AA96-45E7B69EACAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4ED4E6-D9CC-4CDF-AA96-45E7B69EACAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA626EB-0F17-47B9-AC45-9B5C55527912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA626EB-0F17-47B9-AC45-9B5C55527912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA626EB-0F17-47B9-AC45-9B5C55527912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA626EB-0F17-47B9-AC45-9B5C55527912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B0FE417-2BE1-4BBD-9EB9-DE4A67E46DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0FE417-2BE1-4BBD-9EB9-DE4A67E46DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B0FE417-2BE1-4BBD-9EB9-DE4A67E46DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B0FE417-2BE1-4BBD-9EB9-DE4A67E46DAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +136,11 @@ Global
 		{6D63E7C4-F91A-49DF-997A-EAED57B7B5DC} = {71EE4458-7ABB-4197-B247-72B5905908C6}
 		{985890DF-9CBC-4C4A-B7E8-7BA914187AD1} = {71EE4458-7ABB-4197-B247-72B5905908C6}
 		{190258D2-AC11-467C-BA25-E4080C6F37AB} = {71EE4458-7ABB-4197-B247-72B5905908C6}
+		{50194A65-BA55-49D0-A624-5B6742F284EA} = {953EF913-0FC6-4A9A-AE47-1A96D3D8C984}
+		{9828252F-0187-4E84-B918-0105415C77D1} = {953EF913-0FC6-4A9A-AE47-1A96D3D8C984}
+		{BE4ED4E6-D9CC-4CDF-AA96-45E7B69EACAF} = {953EF913-0FC6-4A9A-AE47-1A96D3D8C984}
+		{1DA626EB-0F17-47B9-AC45-9B5C55527912} = {953EF913-0FC6-4A9A-AE47-1A96D3D8C984}
+		{0B0FE417-2BE1-4BBD-9EB9-DE4A67E46DAF} = {953EF913-0FC6-4A9A-AE47-1A96D3D8C984}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AD2700E-A696-44C0-8472-8B681FE4C5C9}
