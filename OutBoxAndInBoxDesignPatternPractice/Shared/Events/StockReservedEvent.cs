@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Shared.Events
 {
-    public class OrderStartedEvent : IEvent
+    public class StockReservedEvent : IEvent
     {
-        public Guid OrderId { get; set; }
         public Guid BuyerId { get; set; }
-        public List<OrderItemMessage> OrderItems { get; set; }
+        public Guid OrderId { get; set; }
         public decimal TotalPrice { get; set; }
+        public List<OrderItemMessage> OrderItems { get; set; }
     }
 }

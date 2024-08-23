@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Order.API.Models;
 using Shared.Events;
+using Shared.Events.StockEvents;
 
 namespace Order.API.Consumers
 {
