@@ -11,3 +11,4 @@ builder.Services.AddDbContext<StockDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServer"));
 });
+
