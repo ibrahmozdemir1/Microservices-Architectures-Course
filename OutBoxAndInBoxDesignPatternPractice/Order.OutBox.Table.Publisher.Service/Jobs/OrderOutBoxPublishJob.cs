@@ -2,7 +2,7 @@
 using MassTransit.Transports;
 using Order.API.Models.Entities;
 using Quartz;
-using Shared.Events.OrderEvents;
+using Shared.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +43,7 @@ namespace Order.OutBox.Table.Publisher.Service.Jobs
                         {
                             await _publishEnpoint.Publish(orderCreatedEvent);
                             OrderOutboxSingletonDatabase.ExecuteAsync(
-                                $@"UPDATE ORDEROUTBOXES SET PROCCESSEDDATE = GETDATE() WHERE ID = '{orderOutbox.Id}'")
+                                $@"UPDATE ORDEROUTBOXES SET PROCCESSEDDATE = GETDATE() WHERE IdempotentToken = '{orderOutbox.IdempotentToken}'");
                         }
 
                     }

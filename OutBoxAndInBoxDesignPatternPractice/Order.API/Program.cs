@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Order.API.Models;
 using Order.API.Models.Entities;
 using Order.API.ViewModels;
-using Shared.Events.OrderEvents;
+using Shared.Events;
 using Shared.Messages;
 using System.Text.Json;
 
@@ -56,12 +56,15 @@ app.MapPost("/create-order", async (CreateOrderVM model, OrderAPIDbContext conte
         TotalPrice = model.Items.Sum(oi => oi.Price * oi.Count),
     };
 
+    var idempotentToken = Guid.NewGuid();
+
     await context.Orders.AddAsync(order);
 
     await context.SaveChangesAsync();
 
     OrderCreatedEvent orderCreatedEvent = new()
     {
+        IdempotentToken = idempotentToken,
         BuyerId = order.BuyerId,
         OrderId = order.OrderId,
         OrderItems = order.OrderItems.Select(oi => new OrderItemMessage()
@@ -83,6 +86,7 @@ app.MapPost("/create-order", async (CreateOrderVM model, OrderAPIDbContext conte
         ProccessedDate = null,
         Payload = JsonSerializer.Serialize(orderCreatedEvent),
         Type = orderCreatedEvent.GetType().Name,
+        IdempotentToken = idempotentToken,
     };
 
     await context.OrderOutboxes.AddAsync(orderOutbox);

@@ -12,7 +12,7 @@ namespace Stock.API.Models.Entities
 
         [BsonRepresentation(MongoDB.Bson.BsonType.Int64)]
         [BsonElement(Order = 1)]
-        public int ProductId { get; set; }
+        public string ProductId { get; set; }
 
         [BsonRepresentation(MongoDB.Bson.BsonType.Int64)]
         [BsonElement(Order = 2)]

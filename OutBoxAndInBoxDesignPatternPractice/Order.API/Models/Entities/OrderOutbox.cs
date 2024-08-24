@@ -1,7 +1,11 @@
-﻿namespace Order.API.Models.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Order.API.Models.Entities
 {
     public class OrderOutbox
     {
+        [Key]
+        public Guid IdempotentToken { get; set; }
         public long Id { get; set; }
         public DateTime OccuredOn { get; set; }
         public DateTime? ProccessedDate { get; set; }
