@@ -2,6 +2,9 @@
 
 Uses Technologies -> C#, .Net, PostgreSQL, MongoDB, RabbitMQ
 
+This project just learning for Microservices Architecture, not a custom project.
+
+# ONE STEP FOR MİCROSERVİCES ARCHİTECTURE
 
 1 - What is Microservice Architectrure ? 
 
@@ -34,3 +37,16 @@ Uses Technologies -> C#, .Net, PostgreSQL, MongoDB, RabbitMQ
 15 - Basic Eventual Consistency Saga Pattern - Choreography Example
 
 16 - Basic Eventual Consistency Saga Pattern - Orchestration Example
+
+# TWO STEP FOR MİCROSERVİCES ARCHİTECTURE
+
+17 - OUTBOX AND INBOX DESİGN PATTERNS THEORY (MİCROSERVİCES COMMUNİCATİON)
+
+18 - OUTBOX AND INBOX DESİGN PATTERNS PRACTİCE 
+
+19 - IDEMPOTENT PROBLEM AND PRACTİCE
+
+20 - EVENT SOURCİNG DESİGN PATTERN FOR MİCROSERVİCES
+
+21 - 
+1 - 
