@@ -57,15 +57,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.Services", "OutBoxAnd
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventStoreExample", "EventStoreExample", "{02B3B75E-3470-4886-ABD1-326235930FA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventStore.Example", "EventStorePractice\EventStore.Example\EventStore.Example.csproj", "{6F0B87B7-A0D2-42D7-8667-CFC84793E8F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventStore.Example", "EventStorePractice\EventStore.Example\EventStore.Example.csproj", "{6F0B87B7-A0D2-42D7-8667-CFC84793E8F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadDataEventStoreExample", "ReadDataEventStoreExample", "{1C4E319B-0351-4321-A53A-B605DE8786E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Application", "ReadDataEventStoreExample\Product.Application\Product.Application.csproj", "{C26F6381-7596-46EC-BC37-B0799E69A082}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Application", "ReadDataEventStoreExample\Product.Application\Product.Application.csproj", "{C26F6381-7596-46EC-BC37-B0799E69A082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Event.Handler.Service", "ReadDataEventStoreExample\Product.Event.Handler.Service\Product.Event.Handler.Service.csproj", "{09093762-3279-46CC-AB3E-941748D6E738}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Event.Handler.Service", "ReadDataEventStoreExample\Product.Event.Handler.Service\Product.Event.Handler.Service.csproj", "{09093762-3279-46CC-AB3E-941748D6E738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedEventStore", "ReadDataEventStoreExample\SharedEventStore\SharedEventStore.csproj", "{393FB747-75FB-4C00-8592-856900546372}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedEventStore", "ReadDataEventStoreExample\SharedEventStore\SharedEventStore.csproj", "{393FB747-75FB-4C00-8592-856900546372}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HealthCheckExample", "HealthCheckExample", "{A1D2779B-C221-438C-9D5B-57D0206EE9D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoring.Service", "HealthCheckExample\Monitoring.Service\Monitoring.Service.csproj", "{F60D5A3B-124F-42B2-B770-503E0A2F1228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceA", "HealthCheckExample\ServiceA\ServiceA.csproj", "{0332FB50-C684-4319-9DAA-2EF8EBD16499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceB", "HealthCheckExample\ServiceB\ServiceB.csproj", "{6E079675-3F18-4B28-A047-D1C121256ACA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +181,18 @@ Global
 		{393FB747-75FB-4C00-8592-856900546372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{393FB747-75FB-4C00-8592-856900546372}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{393FB747-75FB-4C00-8592-856900546372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60D5A3B-124F-42B2-B770-503E0A2F1228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60D5A3B-124F-42B2-B770-503E0A2F1228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60D5A3B-124F-42B2-B770-503E0A2F1228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60D5A3B-124F-42B2-B770-503E0A2F1228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0332FB50-C684-4319-9DAA-2EF8EBD16499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0332FB50-C684-4319-9DAA-2EF8EBD16499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0332FB50-C684-4319-9DAA-2EF8EBD16499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0332FB50-C684-4319-9DAA-2EF8EBD16499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E079675-3F18-4B28-A047-D1C121256ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E079675-3F18-4B28-A047-D1C121256ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E079675-3F18-4B28-A047-D1C121256ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E079675-3F18-4B28-A047-D1C121256ACA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -203,6 +223,9 @@ Global
 		{C26F6381-7596-46EC-BC37-B0799E69A082} = {1C4E319B-0351-4321-A53A-B605DE8786E5}
 		{09093762-3279-46CC-AB3E-941748D6E738} = {1C4E319B-0351-4321-A53A-B605DE8786E5}
 		{393FB747-75FB-4C00-8592-856900546372} = {1C4E319B-0351-4321-A53A-B605DE8786E5}
+		{F60D5A3B-124F-42B2-B770-503E0A2F1228} = {A1D2779B-C221-438C-9D5B-57D0206EE9D2}
+		{0332FB50-C684-4319-9DAA-2EF8EBD16499} = {A1D2779B-C221-438C-9D5B-57D0206EE9D2}
+		{6E079675-3F18-4B28-A047-D1C121256ACA} = {A1D2779B-C221-438C-9D5B-57D0206EE9D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AD2700E-A696-44C0-8472-8B681FE4C5C9}
