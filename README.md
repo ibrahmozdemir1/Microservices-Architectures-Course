@@ -48,5 +48,16 @@ This project just learning for Microservices Architecture, not a custom project.
 
 20 - EVENT SOURCİNG DESİGN PATTERN FOR MİCROSERVİCES
 
-21 - 
-1 - 
+21 - EVENT SOURCİNG AND EVENT STORE PRACTİCE 
+
+22 - Event Source Application with ASP.NET CORE, MongoDB and Event Store
+
+23 - CQRS Pattern 
+
+24 - CQRS Pattern Practice with Event Sourcing
+
+25 - Service Health Checks - Monitoring (Practice)
+
+26 - Traceability (Correlation ID) in Distributed Systems
+
+27 - Practice Application for Traceability (NLOG)
