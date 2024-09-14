@@ -69,11 +69,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedEventStore", "ReadDat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HealthCheckExample", "HealthCheckExample", "{A1D2779B-C221-438C-9D5B-57D0206EE9D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoring.Service", "HealthCheckExample\Monitoring.Service\Monitoring.Service.csproj", "{F60D5A3B-124F-42B2-B770-503E0A2F1228}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monitoring.Service", "HealthCheckExample\Monitoring.Service\Monitoring.Service.csproj", "{F60D5A3B-124F-42B2-B770-503E0A2F1228}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceA", "HealthCheckExample\ServiceA\ServiceA.csproj", "{0332FB50-C684-4319-9DAA-2EF8EBD16499}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceA", "HealthCheckExample\ServiceA\ServiceA.csproj", "{0332FB50-C684-4319-9DAA-2EF8EBD16499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceB", "HealthCheckExample\ServiceB\ServiceB.csproj", "{6E079675-3F18-4B28-A047-D1C121256ACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceB", "HealthCheckExample\ServiceB\ServiceB.csproj", "{6E079675-3F18-4B28-A047-D1C121256ACA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TraceabilityPractice", "TraceabilityPractice", "{C1388A5A-4050-4FDB-87FC-7C50D79BEE65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console.Application.Traceability", "TraceabilityPractice\Console.Application.Traceability\Console.Application.Traceability.csproj", "{2C8CC73C-04C8-49F5-B19E-DACE6E8BBECD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NETCore.Traceability", "TraceabilityPractice\ASP.NETCore.Traceability\ASP.NETCore.Traceability.csproj", "{F7BD265B-96AF-4958-A172-315AFB318FEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageBroker.Scenario", "MessageBroker.Scenario", "{47FDC344-F5C5-463A-9709-1215DCAAFBA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publisher", "TraceabilityPractice\MessageBroker.Scenario\Publisher\Publisher.csproj", "{BDCAA324-514A-423E-B44B-CF18B12D38CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "TraceabilityPractice\MessageBroker.Scenario\Shared\Shared.csproj", "{D2146AB9-2EDD-45DC-BF3F-2744C9CC85D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "TraceabilityPractice\MessageBroker.Scenario\Consumer\Consumer.csproj", "{F99B347B-359A-4731-9DAB-AFC978663EC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,6 +207,26 @@ Global
 		{6E079675-3F18-4B28-A047-D1C121256ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E079675-3F18-4B28-A047-D1C121256ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E079675-3F18-4B28-A047-D1C121256ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8CC73C-04C8-49F5-B19E-DACE6E8BBECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8CC73C-04C8-49F5-B19E-DACE6E8BBECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8CC73C-04C8-49F5-B19E-DACE6E8BBECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8CC73C-04C8-49F5-B19E-DACE6E8BBECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7BD265B-96AF-4958-A172-315AFB318FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BD265B-96AF-4958-A172-315AFB318FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BD265B-96AF-4958-A172-315AFB318FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BD265B-96AF-4958-A172-315AFB318FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDCAA324-514A-423E-B44B-CF18B12D38CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDCAA324-514A-423E-B44B-CF18B12D38CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDCAA324-514A-423E-B44B-CF18B12D38CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDCAA324-514A-423E-B44B-CF18B12D38CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2146AB9-2EDD-45DC-BF3F-2744C9CC85D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2146AB9-2EDD-45DC-BF3F-2744C9CC85D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2146AB9-2EDD-45DC-BF3F-2744C9CC85D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2146AB9-2EDD-45DC-BF3F-2744C9CC85D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99B347B-359A-4731-9DAB-AFC978663EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99B347B-359A-4731-9DAB-AFC978663EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99B347B-359A-4731-9DAB-AFC978663EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99B347B-359A-4731-9DAB-AFC978663EC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -226,6 +260,12 @@ Global
 		{F60D5A3B-124F-42B2-B770-503E0A2F1228} = {A1D2779B-C221-438C-9D5B-57D0206EE9D2}
 		{0332FB50-C684-4319-9DAA-2EF8EBD16499} = {A1D2779B-C221-438C-9D5B-57D0206EE9D2}
 		{6E079675-3F18-4B28-A047-D1C121256ACA} = {A1D2779B-C221-438C-9D5B-57D0206EE9D2}
+		{2C8CC73C-04C8-49F5-B19E-DACE6E8BBECD} = {C1388A5A-4050-4FDB-87FC-7C50D79BEE65}
+		{F7BD265B-96AF-4958-A172-315AFB318FEF} = {C1388A5A-4050-4FDB-87FC-7C50D79BEE65}
+		{47FDC344-F5C5-463A-9709-1215DCAAFBA9} = {C1388A5A-4050-4FDB-87FC-7C50D79BEE65}
+		{BDCAA324-514A-423E-B44B-CF18B12D38CB} = {47FDC344-F5C5-463A-9709-1215DCAAFBA9}
+		{D2146AB9-2EDD-45DC-BF3F-2744C9CC85D7} = {47FDC344-F5C5-463A-9709-1215DCAAFBA9}
+		{F99B347B-359A-4731-9DAB-AFC978663EC0} = {47FDC344-F5C5-463A-9709-1215DCAAFBA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AD2700E-A696-44C0-8472-8B681FE4C5C9}
