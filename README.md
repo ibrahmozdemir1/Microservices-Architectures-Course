@@ -70,3 +70,8 @@ This project just learning for Microservices Architecture, not a custom project.
 
 30 - PRACTİCE API GATEWAY WİTH YARP
 
+31 - Load Balancing Theory
+
+32 - Load Balancing Practice with NGINX
+
+33 - Load Balancing Practice with YARP and OCELOT
