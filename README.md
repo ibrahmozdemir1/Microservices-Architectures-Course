@@ -38,7 +38,7 @@ This project just learning for Microservices Architecture, not a custom project.
 
 16 - Basic Eventual Consistency Saga Pattern - Orchestration Example
 
-# TWO STEP FOR MİCROSERVİCES ARCHİTECTURE
+# SECOND STEP FOR MİCROSERVİCES ARCHİTECTURE
 
 17 - OUTBOX AND INBOX DESİGN PATTERNS THEORY (MİCROSERVİCES COMMUNİCATİON)
 
@@ -61,3 +61,12 @@ This project just learning for Microservices Architecture, not a custom project.
 26 - Traceability (Correlation ID) in Distributed Systems
 
 27 - Practice Application for Traceability (NLOG)
+
+# THREE STEP FOR MİCROSERVİCES ARCHİTECTURE
+
+28 - API GATEWAY
+
+29 - PRACTİCE API GATEWAY WİTH OCELOT 
+
+30 - PRACTİCE API GATEWAY WİTH YARP
+
